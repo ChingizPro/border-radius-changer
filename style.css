@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Ubuntu Sans Mono", monospace;
+}
+span, a, label {
+    display: inline-block;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  appearance: textfield;
+}
+.page {
+    min-height: 100svh;
+    background-color: #333;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 150px 50px;
+    text-align: center;
+}
+.title {
+    color: lime;
+    margin-bottom: 80px;
+    font-size: 33px;
+}
+.wrapper {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.box {
+    width: 500px;
+    height: 350px;
+    background-color: white;
+}
+.input {
+    position: absolute;
+    background-color: transparent;
+    color: white;
+    padding: 3px 4px;
+    outline: none;
+    font-size: 20px;
+    width: 60px;
+}
+.input1 {
+    top: -7px;
+    left: -7px;
+    translate: -100% -100%;
+}
+.input2 {
+    top: -7px;
+    right: -7px;
+    translate: 100% -100%;
+}
+.input3 {
+    bottom: -7px;
+    left: -7px;
+    translate: -100% 100%;
+}
+.input4 {
+    bottom: -7px;
+    right: -7px;
+    translate: 100% 100%;
+}
+@media(max-width:800px){
+    .box {
+        width: 350px;
+        height: 250px;
+    }
+    .page {
+        padding: 70px 20px;
+    }
+}
+@media(max-width:550px){
+    .box {
+        width: 250px;
+        height: 150px;
+    }
+    .input {
+        font-size: 18px;
+        width: 50px;
+        padding: 2px 3px;
+    }
+    .title {
+        font-size: 27px;
+    }
+    .page {
+        padding: 40px 15px;
+    }
+}
+@media(max-width:400px){
+    .box {
+        width: 150px;
+        height: 90px;
+    }
+    .input {
+        font-size: 16px;
+        width: 40px;
+        padding: 1px 2px;
+    }
+    .title {
+        font-size: 21px;
+        margin-bottom: 50px;
+    }
+}
