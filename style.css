@@ -1,120 +1,157 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
 * {
-    box-sizing: border-box;
-    margin: 0;
-    font-family: "Ubuntu Sans Mono", monospace;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
 }
+
 span, a, label {
-    display: inline-block;
+  display: inline-block;
 }
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
-/* Chrome, Safari, Edge, Opera */
+
+/* Remove number arrows */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-/* Firefox */
 input[type=number] {
   appearance: textfield;
 }
+
+body {
+  background: radial-gradient(circle at top, #202124, #121212);
+  color: #e8eaed;
+}
+
 .page {
-    min-height: 100svh;
-    background-color: #333;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 150px 50px;
-    text-align: center;
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 140px 40px;
+  text-align: center;
 }
+
 .title {
-    color: lime;
-    margin-bottom: 80px;
-    font-size: 33px;
+  color: #00ffb3;
+  margin-bottom: 80px;
+  font-size: 32px;
+  text-shadow: 0 0 10px #00ffb3;
+  letter-spacing: 0.5px;
 }
+
 .wrapper {
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
+
 .box {
-    width: 500px;
-    height: 350px;
-    background-color: white;
+  width: 480px;
+  height: 340px;
+  background: linear-gradient(145deg, #f9fafb, #dce0e4);
+  border-radius: 12px;
+  box-shadow:
+    0 4px 25px rgba(0, 255, 179, 0.2),
+    inset 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
+.box:hover {
+  box-shadow:
+    0 4px 35px rgba(0, 255, 179, 0.4),
+    inset 0 0 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+}
+
 .input {
-    position: absolute;
-    background-color: transparent;
-    color: white;
-    padding: 3px 4px;
-    outline: none;
-    font-size: 20px;
-    width: 60px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.12);
+  color: #00ffb3;
+  border: 1px solid #00ffb3;
+  border-radius: 6px;
+  padding: 4px 6px;
+  outline: none;
+  font-size: 20px;
+  width: 60px;
+  transition: all 0.25s ease;
 }
+.input:focus {
+  background: rgba(0, 255, 179, 0.1);
+  box-shadow: 0 0 12px rgba(0, 255, 179, 0.3);
+}
+
 .input1 {
-    top: -7px;
-    left: -7px;
-    translate: -100% -100%;
+  top: -7px;
+  left: -7px;
+  translate: -100% -100%;
 }
 .input2 {
-    top: -7px;
-    right: -7px;
-    translate: 100% -100%;
+  top: -7px;
+  right: -7px;
+  translate: 100% -100%;
 }
 .input3 {
-    bottom: -7px;
-    left: -7px;
-    translate: -100% 100%;
+  bottom: -7px;
+  left: -7px;
+  translate: -100% 100%;
 }
 .input4 {
-    bottom: -7px;
-    right: -7px;
-    translate: 100% 100%;
+  bottom: -7px;
+  right: -7px;
+  translate: 100% 100%;
 }
-@media(max-width:800px){
-    .box {
-        width: 350px;
-        height: 250px;
-    }
-    .page {
-        padding: 70px 20px;
-    }
+
+/* MEDIA QUERIES */
+@media(max-width: 800px) {
+  .box {
+    width: 350px;
+    height: 250px;
+  }
+  .page {
+    padding: 80px 25px;
+  }
+  .title {
+    font-size: 28px;
+  }
 }
-@media(max-width:550px){
-    .box {
-        width: 250px;
-        height: 150px;
-    }
-    .input {
-        font-size: 18px;
-        width: 50px;
-        padding: 2px 3px;
-    }
-    .title {
-        font-size: 27px;
-    }
-    .page {
-        padding: 40px 15px;
-    }
+
+@media(max-width: 550px) {
+  .box {
+    width: 250px;
+    height: 160px;
+  }
+  .input {
+    font-size: 17px;
+    width: 50px;
+  }
+  .title {
+    font-size: 24px;
+    margin-bottom: 60px;
+  }
+  .page {
+    padding: 50px 20px;
+  }
 }
-@media(max-width:400px){
-    .box {
-        width: 150px;
-        height: 90px;
-    }
-    .input {
-        font-size: 16px;
-        width: 40px;
-        padding: 1px 2px;
-    }
-    .title {
-        font-size: 21px;
-        margin-bottom: 50px;
-    }
+
+@media(max-width: 400px) {
+  .box {
+    width: 160px;
+    height: 100px;
+  }
+  .input {
+    font-size: 15px;
+    width: 40px;
+  }
+  .title {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
 }
